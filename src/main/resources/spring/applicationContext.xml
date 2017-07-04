@@ -21,9 +21,11 @@
         <constructor-arg ref="razdelDao"/>
         <constructor-arg ref="resultDao"/>
     </bean>
+
     <bean id="razdelDao" class="test_java.dao.impl.RazdelHibernateDaoImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
+
     <bean id="resultDao" class="test_java.dao.impl.ResultHibernateDaoImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
@@ -34,7 +36,8 @@
     <bean id="taskDao" class="test_java.dao.impl.TaskHibernateDaoImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
-    <bean id ="frame" class="test_java.gui.RazdelFrame" >
+
+    <bean id="frame" class="test_java.gui.RazdelFrame">
         <constructor-arg ref="testFrame"/>
         <constructor-arg ref="examFrame"/>
         <property name="razdelServise" ref="razdelServise"/>
@@ -47,10 +50,6 @@
         <property name="testService" ref="testService"/>
 
     </bean>
-    <!--<bean id="loginPane" class="test_java.gui.LoginPane">-->
-
-
-    <!--</bean>-->
 
     <bean id="razdelServise" class="test_java.service.RazdelServise">
         <constructor-arg ref="razdelDao"/>
@@ -63,13 +62,11 @@
     </bean>
 
     <bean id="myDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="${jdbc.driverClassName}" />
-        <property name="url" value="${jdbc.url}" />
-        <property name="username" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
-
-
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="myDataSource"/>
