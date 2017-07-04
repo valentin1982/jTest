@@ -69,21 +69,7 @@
         <property name="password" value="${jdbc.password}" />
     </bean>
 
-    <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
-        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
-        <!--<property name="url" value="jdbc:mysql://93.74.150.212:3306/jtest"/>-->
-        <!--<property name="username" value="valik"/>-->
-        <!--<property name="password" value="jkbxrf1982"/>-->
-    <!--</bean>-->
 
-    <!--соединение с локальной базой-->
-
-    <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
-        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
-        <!--<property name="url" value="jdbc:mysql://localhost:3306/jtest"/>-->
-        <!--<property name="username" value="root"/>-->
-        <!--<property name="password" value="root"/>-->
-    <!--</bean>-->
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="myDataSource"/>
