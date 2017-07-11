@@ -4,7 +4,7 @@
 
  Application for testing knowledge on java.
 
- Using technologies Spring, Hibernate, Swing.
+ Used technologies Spring, Hibernate, Swing.
 
  Database
 
